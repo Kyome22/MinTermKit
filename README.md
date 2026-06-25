@@ -33,7 +33,7 @@ from while still being usable for a real local shell.
 Add the package with Swift Package Manager:
 
 ```swift
-.package(url: "https://github.com/<you>/MinTermKit.git", from: "0.1.0")
+.package(url: "https://github.com/Kyome22/MinTermKit.git", from: "x.y.z")
 ```
 
 …and depend on the `MinTermKit` product from your app target.
@@ -148,4 +148,4 @@ independently.
 
 ## License
 
-No license has been chosen yet. Add one (e.g. MIT) before publishing.
+MIT License © 2026 Takuto NAKAMURA (Kyome). See [LICENSE](LICENSE).
