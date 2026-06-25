@@ -8,6 +8,8 @@ MinTermKit deliberately targets the "**vim / less / tmux works**" feature level
 rather than full terminal completeness, making it small enough to read and learn
 from while still being usable for a real local shell.
 
+<img width="549" height="434" alt="Image" src="https://github.com/user-attachments/assets/31488841-3076-4cc0-a2d4-edd896665ccd" />
+
 ## Features
 
 - **UI-agnostic engine** — a VT500-style escape-sequence parser, a screen +
