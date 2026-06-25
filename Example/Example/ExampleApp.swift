@@ -12,7 +12,20 @@ import MinTermKit
 struct ExampleApp: App {
     var body: some Scene {
         WindowGroup {
-            Text("MinTermKit")
+            ContentView()
+                .frame(minWidth: 480, minHeight: 320)
         }
+    }
+}
+
+struct ContentView: View {
+    @State private var session = TerminalSession(cols: 80, rows: 24)
+
+    var body: some View {
+        TerminalView(session: session, padding: 8)
+            .navigationTitle(session.title.isEmpty ? "MinTermKit" : session.title)
+            .onAppear {
+                session.startLocalProcess(executable: "/bin/zsh")
+            }
     }
 }

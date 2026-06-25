@@ -19,7 +19,22 @@ let package = Package(
     ],
     targets: [
         .target(
+            name: "MinTermCore",
+            swiftSettings: swiftSettings
+        ),
+        .target(
+            name: "MinTermProcess",
+            dependencies: ["MinTermCore"],
+            swiftSettings: swiftSettings
+        ),
+        .target(
             name: "MinTermKit",
+            dependencies: ["MinTermCore", "MinTermProcess"],
+            swiftSettings: swiftSettings
+        ),
+        .testTarget(
+            name: "MinTermCoreTests",
+            dependencies: ["MinTermCore"],
             swiftSettings: swiftSettings
         ),
         .testTarget(
